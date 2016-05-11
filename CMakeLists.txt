@@ -87,6 +87,15 @@ if(MINGW)
 	option_with_default( OCE_INSTALL_PRIVATE_SAMEDIR "Install private DLLs in the same binary directory" OFF )
 endif(MINGW)
 
+####################################################
+# Use ccache is available, to speed up compilation #
+####################################################
+find_program(CCACHE_FOUND ccache)
+if(CCACHE_FOUND)
+    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ccache)
+    set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
+endif(CCACHE_FOUND)
+
 ############################
 # Library name definitions #
 ############################
