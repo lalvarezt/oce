@@ -60,8 +60,9 @@ after_script:
             for file in $(cat occt/summary.failed); do head -n -1 occt/$file.{tcl,log}; done;
         fi;
     fi
+cache:
+  ccache: true
 branches:
   only:
     - master
     - /^review/
-
