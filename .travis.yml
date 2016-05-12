@@ -62,6 +62,8 @@ after_script:
     fi
 cache:
   ccache: true
+  directories:
+    - $HOME/cmake-build
 branches:
   only:
     - master
