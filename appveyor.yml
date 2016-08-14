@@ -55,6 +55,7 @@ after_build:
 
 artifacts:
   - path: oce-%oce_version%.%ARCH%.%Compiler%.zip
+    name: oce-%oce_version%
 
 test: off  # to avoid discovering tests
 

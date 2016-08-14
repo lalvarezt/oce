@@ -40,5 +40,5 @@ mingw32-make install > /dev/null
 #
 # Finally run tests
 #
-export PATH=$PATH:/c/MinGW/bin:/c/oce-0.17.1-dev/oce-$oce_version/bin:/c/MinGW/bin:
+export PATH=$PATH:/c/MinGW/bin:/c/oce-$oce_version/bin:/c/MinGW/bin:
 mingw32-make test
